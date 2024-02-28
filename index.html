@@ -13,17 +13,17 @@
     </nav>
 
     <section class="ContenedorEntradaDeDatos">
-        <textarea class="entradaDeDatos" placeholder="Current Address">
+        <textarea class="entradaDeDatos" placeholder="Ingresa el texto que desees encriptar.">
             
         </textarea> 
         <p class="informacion"><spam><img src="images/bi_exclamation-circle-fill.png"></spam> Solo letras minúsculas y sin acentos</p>
         <div class="contenedorBotores">
             <button class="Encriptar" onclick="captarDatos()">Encriptar</button>
-            <button class="Desencriptar">Desencriptar</button>
+            <button class="Desencriptar" onclick="devolverDatos()">Desencriptar</button>
         </div>
     </section>
     <section class="ContenedorSalidaDeDatos">
-        <div class="salidaDeDatos">
+        <div class="salidaDeDatos" data-value="encriptado">
             <img src="images/Muñeco.png">
             <p class="textoNegrita700">Ningún mensaje fue encontrado</p>
             <p class="textoNegrita400">Ingresa el texto que desees encriptar o desencriptar.</p>
