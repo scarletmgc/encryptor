@@ -4,6 +4,11 @@ body{
      background: #F3F5FC;
 }
 
+.content {
+    width: 1024px;
+    margin: 0 auto;
+    background: aqua;
+}
 .logo{
      position: absolute;
      width: 120px;
@@ -13,7 +18,7 @@ body{
 }
 .ContenedorEntradaDeDatos {
      /* display: grid; */
-     width: 840px;
+     width: 519px;
      height: 768px;
      margin: 0px 10px;
      /* position: initial; */
@@ -41,7 +46,7 @@ body{
  .informacion{
      position: relative;
      font-family: "Inter", sans-serif;
-     width: 80%;
+     width: 70%;
      margin: 1em 6em;
      font-weight: 400;
      text-align: left;
@@ -69,10 +74,10 @@ body{
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
-.contenedorBotores button{
+button{
      width: 236px;
      height:67px;
      padding: 24px;
@@ -80,25 +85,25 @@ body{
      font-family: "Inter", sans-serif;
      font-size: 1em;
 }
-button.Encriptar {
+button.btn_solid {
     color: white;
     background: #0A3871;
     border:solid 2px #0A3871;
 }
 
-button.Desencriptar {
+button.btn_border {
     color: #0A3871;
     border: solid 2px #0A3871;
     background: content-box;
 }
 
 section.ContenedorSalidaDeDatos {
-    width: 400px;
-    height: 940px;
+    width: 380px;
+    height: 707px;
     background: white;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px #00000014;
-    margin: 40px 0px 10px;
+    /* margin: 40px 0px 10px; */
     float: right;
     top: 40px;
 }
@@ -111,14 +116,17 @@ img {
 
 .salidaDeDatos {
     position: relative;
-    width: 100%;
-    height: 80px;
-    display: flex;
+    width: 90%;
+    height: 400px;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     margin: auto;
     /* align-content: center; */
     top: 25%;
+    font-family: "Inter", sans-serif;
+    font-size: 2em;
+    text-align: justify;
 }
 /*-------------------------- font sizes----------------------*/
 
@@ -129,6 +137,7 @@ img {
     line-height: 29px;
     letter-spacing: 0em;
     text-align: center;
+    color: #343A40;
 }
 
 .textoNegrita400{
@@ -138,4 +147,5 @@ img {
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
+    color:  #343A40;
 }
