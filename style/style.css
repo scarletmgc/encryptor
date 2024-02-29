@@ -16,6 +16,10 @@ body{
      left: 40px;
      gap: 40px;
 }
+.ocultar {
+    display: none;
+}
+
 .ContenedorEntradaDeDatos {
      /* display: grid; */
      width: 519px;
