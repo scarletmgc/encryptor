@@ -38,8 +38,9 @@ function devolverDatos(){
 function copiar(){
     let salidaDeDatos= document.querySelector(".textoACopiar").innerText;
     console.log(salidaDeDatos);
-    
+  // Copy the text inside the text field
   navigator.clipboard.writeText(salidaDeDatos);
   
-  document.querySelector(".entradaDeDatos").value=salidaD
+  document.querySelector(".entradaDeDatos").value=salidaDeDatos;
+  
 }
