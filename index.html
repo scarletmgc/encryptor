@@ -13,9 +13,7 @@
     </nav>
     <div class="content">
         <section class="ContenedorEntradaDeDatos">
-            <textarea class="entradaDeDatos" placeholder="Ingresa el texto que desees encriptar.">
-                
-            </textarea> 
+            <textarea class="entradaDeDatos" placeholder="Ingresa el texto que desees encriptar."></textarea> 
             <p class="informacion"><spam><img src="images/bi_exclamation-circle-fill.png"></spam> Solo letras minúsculas y sin acentos</p>
             <div class="contenedorBotores">
                 <button class="Encriptar btn_solid" onclick="captarDatos()">Encriptar</button>
@@ -24,12 +22,13 @@
         </section>
         <section class="ContenedorSalidaDeDatos">
             <div class="salidaDeDatos" data-value="encriptado">
+                <div class="textoACopiar"></div>
                 <div class="mostrar">
                     <img src="images/Muñeco.png" >
                     <p class="textoNegrita700" >Ningún mensaje fue encontrado</p>
                     <p class="textoNegrita400">Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
-                <button class="copia btn_border" onclick="copiar()">Encriptar</button>
+                <button class="copia btn_border" onclick="copiar()">Copiar</button>
             </div>
         </section>
     </div>
