@@ -132,12 +132,12 @@ img {
 
 .salidaDeDatos {
     position: relative;
-    width: 100%;
+    width: 340px;
     height: 510px;
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
+    margin: auto;
     /* align-content: center; */
     /* top: 25%; */
     padding: 64px 24px;
@@ -145,6 +145,7 @@ img {
     /* font-size: 2em; */
     text-align: justify;
 }
+
 button.copia.btn_border {
     position: relative;
     margin: 0 auto;
@@ -192,4 +193,14 @@ button.copia.btn_border {
         display: block;
         width: 100%;
     }
+
+    button.copia.btn_border {
+        position: relative;
+        /* width: 100%; */
+        margin: 0% 30%;
+        bottom: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
   }
