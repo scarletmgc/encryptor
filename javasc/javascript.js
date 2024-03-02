@@ -1,23 +1,31 @@
-//Encriptar elemento
-    // const letraA = /a/g;
-    // const letraI = /i/g;
-    // const letraO = /o/g;
-    // const letraU = /u/g;
 
-let vocales = [[/e/g,"enter"],[/a/g,"ai"],[/o/g,"ofer"],[/u/g,"ufat"],[/i/g,"imes"]];
-//let texto = [[/enter/g,"e"],[/ai/g,"a"],[/ofer/g,"o"],[/ufat/g,"u"],[/imes/g,"i"]];
+//[["e","enter"],["a","ai"],["o","ofer"],["u","ufat"],["i","imes"]];
+//aquí tenemos un objeto con los datos de las vocales a utilizar
+let vocales = {
+    e: "enter",
+    a: "ai",
+    o: "ofer",
+    u: "ufat",
+    i: "imes"
+};
 
-
-//class de captar datos
+//En esta primera función, captamos los datos a encriptar.
 
 function encriptardor(){
+    //Aquí ocultamos el div que contiene las imágenes.
     document.querySelector(".mostrar").classList.add("ocultar");
     let entradaDeDatos=document.querySelector(".entradaDeDatos").value;
-    console.log(entradaDeDatos)
+    let matches = [];    
     
-    for (let index = 0; index < vocales.length; index++) {
-        entradaDeDatos = entradaDeDatos.replaceAll(vocales[index][0],vocales[index][1]);
+    for(let i = 0; i < entradaDeDatos.length; i++) {
+        if(vocales[entradaDeDatos[i].toLowerCase()]) {
+            matches.push(vocales[entradaDeDatos[i].toLowerCase()]);
+        } else {
+            matches.push(entradaDeDatos[i]);
+        }
     }
+    entradaDeDatos = matches.join("");
+
     document.querySelector(".textoACopiar").innerText=entradaDeDatos;
     
     console.log(entradaDeDatos);
@@ -25,15 +33,17 @@ function encriptardor(){
 }
 
 //class de la salida de datos desencriptar
-function devolverDatos(){
+function desencriptar(){
     let entradaDeDatos=document.querySelector(".entradaDeDatos").value;
-    for (let jindex = 0; jindex < vocales.length; jindex++) {
-        entradaDeDatos = entradaDeDatos.replaceAll(vocales[jindex][1],vocales[jindex][0]);        
+    for(let key in vocales) {
+       
+        entradaDeDatos = entradaDeDatos.replace(vocales[key], key);
     }
-    document.querySelector(".mostrar").classList.add("ocultar");
-    console.log(entradaDeDatos);
 
     document.querySelector(".textoACopiar").innerText=entradaDeDatos;
+    
+    console.log(entradaDeDatos);
+    document.querySelector(".entradaDeDatos").value="";
 
 }
 
@@ -41,9 +51,7 @@ function devolverDatos(){
 function copiar(){
     let salidaDeDatos= document.querySelector(".textoACopiar").innerText;
     console.log(salidaDeDatos);
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(salidaDeDatos);
-  
+  navigator.clipboard.writeText(salidaDeDatos);  
   document.querySelector(".entradaDeDatos").value=salidaDeDatos;
   
 }
